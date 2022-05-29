@@ -1,7 +1,3 @@
 <router-outlet></router-outlet>
-<p>{{ statistique1.identifiant }}</p>
-<p>{{ statistique1.titre }}</p>
-<p>{{ statistique1.valeur }}</p>
-<p>{{ statistique2.identifiant }}</p>
-<p>{{ statistique2.titre }}</p>
-<p>{{ statistique2.valeur }}</p>
+<app-statistique [statistique]="statistique1"></app-statistique>
+<app-statistique [statistique]="statistique2"></app-statistique>

@@ -1,5 +1,6 @@
 <router-outlet></router-outlet>
 <div *ngFor="let statistique of statistiqueService.statistiques">
     <app-statistique [statistique]="statistique">
+        <button (click)="removeStatistique(statistique)">Supprimer</button>
     </app-statistique>
 </div>  

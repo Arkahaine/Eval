@@ -13,6 +13,10 @@ export class AppComponent {
     ){
       setTimeout(() => {
         this.statistiqueService.statistiques.push(new Statistique("3", "Suisse", "24 145 015"));
-      }, 3000);
+      }, 5000);
+    }
+    removeStatistique(statistique: Statistique){
+      let index = this.statistiqueService.statistiques.indexOf(statistique);
+      this.statistiqueService.statistiques.splice(index, 1);
     }
 }

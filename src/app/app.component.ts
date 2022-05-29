@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Statistique } from './models/statistique';
+import { StatistiqueService } from './statistique.service';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,11 @@ import { Statistique } from './models/statistique';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  statistiques: Statistique[] = [
-    new Statistique("1", "France", "68 125 478"),
-    new Statistique("2", "Italie", "54 012 354")];
-
-    constructor(){
+    constructor(
+      public statistiqueService: StatistiqueService
+    ){
       setTimeout(() => {
-        this.statistiques.push(new Statistique("3", "Suisse", "24 145 015"));
+        this.statistiqueService.statistiques.push(new Statistique("3", "Suisse", "24 145 015"));
       }, 3000);
     }
 }

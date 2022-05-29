@@ -7,6 +7,13 @@ import { Statistique } from './models/statistique';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  statistique1: Statistique = new Statistique("1", "France", "68 125 478");
-  statistique2: Statistique = new Statistique("2", "Italie", "54 012 354");
+  statistiques: Statistique[] = [
+    new Statistique("1", "Chine", "1 448 471 000"),
+    new Statistique("2", "Inde", "1 406 632 000")];
+
+    constructor(){
+      setTimeout(() => {
+        this.statistiques.push(new Statistique("2", "Etats-Unis", "334 805 000"));
+      }, 3000);
+    }
 }
